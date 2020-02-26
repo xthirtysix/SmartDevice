@@ -8,19 +8,62 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
-  color: $font-color-dark;
+  color: $foreground-color;
 
   background-color: $background-color;
-}
-
-a {
-  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   display: block;
   height: auto;
+}
+
+.container {
+  box-sizing: border-box;
+  width: auto;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+
+  &--narrow {
+    padding: 0 135px;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  padding: 15px 25px;
+
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $foreground-color-light;
+
+  background-color: transparent;
+
+  border: 1px solid $foreground-color-light;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  &--blue {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &--banner {
+    font-size: 16px;
+    line-height: 19px;
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
 }
 
 .visually-hidden {

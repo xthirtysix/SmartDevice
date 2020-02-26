@@ -337,13 +337,48 @@ body {
   color: #666666;
   background-color: #ffffff; }
 
-a {
-  text-decoration: none; }
-
 img {
   max-width: 100%;
   display: block;
   height: auto; }
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: auto;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px; }
+  .container--narrow {
+    padding: 0 135px; }
+
+.button {
+  display: inline-block;
+  width: auto;
+  padding: 15px 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px; }
+  .button--blue {
+    color: #00b2ff;
+    border-color: #00b2ff; }
+  .button--banner {
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #00b2ff;
+    border-color: #00b2ff; }
 
 .visually-hidden {
   position: absolute;
@@ -357,3 +392,18 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.main-banner {
+  background-color: #1b2d37; }
+
+.services {
+  background-color: #1b2d37; }
+
+.questions {
+  background-color: #00b2ff; }
+
+.footer {
+  background-color: #f5f5f5; }
+
+.modal {
+  background-color: #00b2ff; }
