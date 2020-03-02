@@ -5,6 +5,11 @@
 .services__container {
   padding-top: 52px;
   padding-bottom: 91px;
+
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
 }
 
 .services__header {
@@ -16,6 +21,14 @@
   font-size: 36px;
   line-height: 51px;
   color: $foreground-color-light;
+
+  @media (max-width: $tablet) {
+    max-width: 615px;
+    margin-top: 20px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .services__list {
@@ -25,12 +38,22 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .services__item {
   width: 31.7%;
   max-height: 625px;
   margin-bottom: 37px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    max-height: 256px;
+    margin-bottom: 46px;
+  }
 }
 
 .services__link {
@@ -105,5 +128,20 @@
     background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 40px 45px 60px;
+    min-height: 256px;
+    height: auto;
+
+    &::before {
+      min-height: 256px;
+
+      width: 100%;
+      height: auto;
+
+      background-size: 100% auto;
+    }
   }
 }

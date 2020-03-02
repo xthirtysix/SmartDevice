@@ -15,7 +15,6 @@
 </symbol></svg>
     </div>
 
-
     <header>
       <div class="site-header">
         <div class="container site-header__container">
@@ -27,8 +26,8 @@
             </svg>
           </a>
           <ul class="site-header__contacts">
-            <li class="site-header__contact-item site-header__contact-item--mail"><a href="mailto:info@sd.ru" class="site-header__contact-link">info@sd.ru</a></li>
-            <li class="site-header__contact-item site-header__contact-item--phone"><a href="tel:+74950005252" class="site-header__contact-link">+7 (495) 000 52 52</a></li>
+            <li class="site-header__contact-item"><a href="mailto:info@sd.ru" class="site-header__contact-link site-header__contact-link--mail">info@sd.ru</a></li>
+            <li class="site-header__contact-item"><a href="tel:+74950005252" class="site-header__contact-link site-header__contact-link--phone">+7 (495) 000 52 52</a></li>
             <li class="site-header__contact-item site-header__contact-item--callback"><a class="button">Заказать звонок</a></li>
           </ul>
         </div>
@@ -72,7 +71,7 @@
                 <use xlink:href="#icon-detective"></use>
               </svg>
               <h3 class="advantages__header advantages__header--confidentiality">Полная конфиденциальность</h3>
-              <p class="advantages__text">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+              <p class="advantages__text advantages__text--confidentiality">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__icon">
@@ -89,7 +88,7 @@
         <div class="about__wrapper">
           <h2 class="about__header">О компании</h2>
           <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__responsive-text about__responsive-text--desktop-hidden">..</span><span class="about__responsive-text about__responsive-text--tablet-hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
           <a href="#" class="about__button button button--blue">Подробнее</a>
         </div>
       </section>
@@ -119,12 +118,12 @@
             <p class="form__header">Остались вопросы? Задайте их нам!</p>
             <p class="form__description">Мы проконсультируем Вас бесплатно</p>
             <div class="form__container">
-              <label for="questions-name">
-                <input type="text" name="questions" id="questions-name" placeholder="Имя">
+              <label class="visually-hidden" for="questions-name">
               </label>
-              <label for="questions-phone">
-                <input type="tel" name="questions" id="questions-phone" placeholder="Телефон">
+              <input type="text" name="questions" id="questions-name" placeholder="Имя">
+              <label class="visually-hidden" for="questions-phone">
               </label>
+              <input type="tel" name="questions" id="questions-phone" placeholder="Телефон">
             </div>
             <label for="questions-question">
               <textarea class="form__textarea" name="questions" id="questions-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
@@ -179,12 +178,12 @@
           <h2 class="footer__header">Разделы сайта</h2>
           <ul class="footer__navigation-list">
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">О компании</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Продукты</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Производство печатных плат</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Монтаж печатных плат</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Комплектующие</a></li>
+            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Продукты</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Доставка</a></li>
+            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Производство печатных плат</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Контакты</a></li>
+            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Монтаж печатных плат</a></li>
           </ul>
         </nav>
         <div class="footer__contacts">

@@ -33,6 +33,14 @@ img {
   &--narrow {
     padding: 0 135px;
   }
+
+  @media (max-width: $tablet) {
+    padding: 0 25px;
+
+    &--narrow {
+      padding: 0 25px;
+    }
+  }
 }
 
 .button {
