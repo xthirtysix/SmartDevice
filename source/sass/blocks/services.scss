@@ -1,3 +1,109 @@
 .services {
   background-color: $background-color-dark;
 }
+
+.services__container {
+  padding-top: 52px;
+  padding-bottom: 91px;
+}
+
+.services__header {
+  margin-bottom: 51px;
+
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $foreground-color-light;
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services__item {
+  width: 31.7%;
+  max-height: 625px;
+  margin-bottom: 37px;
+}
+
+.services__link {
+  box-sizing: border-box;
+  position: relative;
+
+  display: block;
+  height: 620px;
+  padding: 50px 44px 60px;
+
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: $foreground-color-light;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    opacity: 0.2;
+    filter: grayscale(100%);
+  }
+
+
+  &--production {
+    &::before {
+      background-image: url("/img/service_production.png");
+    }
+  }
+
+  &--installment {
+    &::before {
+      background-image: url("/img/service_installment.png");
+    }
+  }
+
+  &--parts {
+    &::before {
+      background-image: url("/img/service_parts.png");
+    }
+  }
+
+  span {
+    display: block;
+    max-width: 170px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 63px;
+    height: 63px;
+
+    background-color: $accent-color;
+    background-image: url("/img/arrow.svg");
+    background-size: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}

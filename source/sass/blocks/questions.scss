@@ -1,3 +1,23 @@
 .questions {
+  width: 100%;
+  padding-top: 76px;
+  padding-bottom: 114px;
+
   background-color: $accent-color;
+}
+
+.questions__container {
+  display: flex;
+  justify-content: flex-end;
+
+  background-image: url("/img/paperplane.png");
+  background-position: calc(50% - 355px) 85px;
+  background-size: 511px 288px;
+  background-repeat: no-repeat;
+}
+
+.questions__form {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 10px;
 }

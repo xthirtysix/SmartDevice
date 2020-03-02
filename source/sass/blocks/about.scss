@@ -1,0 +1,28 @@
+.about {
+  padding-top: 25px;
+  padding-bottom: 111px;
+}
+
+.about__wrapper {
+  padding-left: 180px;
+}
+
+.about__header {
+  margin-bottom: 21px;
+
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about__text {
+  margin-bottom: 21px;
+  padding-right: 10px;
+}
+
+.about__button {
+  margin-top: 17px;
+  width: 180px;
+}
