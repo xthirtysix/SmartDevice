@@ -1,10 +1,19 @@
 .about {
   padding-top: 25px;
   padding-bottom: 111px;
+
+  @media (max-width: $tablet) {
+    padding-top: 10px;
+    padding-bottom: 86px;
+  }
 }
 
 .about__wrapper {
   padding-left: 180px;
+
+  @media (max-width: $tablet) {
+    padding-left: 188px;
+  }
 }
 
 .about__header {
@@ -15,11 +24,40 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+
+  @media (max-width: $tablet) {
+    margin-top: 6px;
+    margin-bottom: 26px;
+    margin-left: -3px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .about__text {
   margin-bottom: 21px;
   padding-right: 10px;
+
+  @media (max-width: $tablet) {
+    padding-right: 0;
+  }
+}
+
+.about__responsive-text {
+  &--desktop-hidden {
+    display: none;
+  }
+
+  @media (max-width: $tablet) {
+    &--tablet-hidden {
+      display: none;
+    }
+
+    &--desktop-hidden {
+      display: inline;
+    }
+  }
 }
 
 .about__button {

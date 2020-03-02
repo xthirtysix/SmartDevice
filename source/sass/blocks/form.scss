@@ -14,6 +14,11 @@
   font-size: 36px;
   line-height: 51px;
   color: $foreground-color-light;
+
+  @media (max-width: $tablet) {
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .form__description {
@@ -23,6 +28,11 @@
 
   font-family: $ptmono;
   color: $foreground-color-light;
+
+  @media (max-width: $tablet) {
+    margin-top: 17px;
+    margin-bottom: 53px;
+  }
 }
 
 .form__container {
@@ -31,13 +41,14 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
   padding-left: 3px;
+
 }
 
 input[type="text"],
 input[type="tel"],
 .form__textarea {
   box-sizing: border-box;
-  padding: 13px 18px 17px;
+  padding: 14px 18px 17px;
 
   color: $foreground-color-light;
 
@@ -47,13 +58,23 @@ input[type="tel"],
   &::placeholder {
     color: $foreground-color-light;
   }
+
+  @media (max-width: $tablet) {
+    padding: 17px;
+  }
 }
 
 input[type="text"],
 input[type="tel"] {
-  width: 270px;
+  width: 48%;
   margin-bottom: 20px;
+
+  @media (max-width: $tablet) {
+    min-width: 276px;
+    margin-bottom: 23px;
+  }
 }
+
 
 .form__textarea {
   width: 100%;
@@ -62,6 +83,12 @@ input[type="tel"] {
   margin-left: 3px;
 
   resize: none;
+
+  @media (max-width: $tablet) {
+    padding-top: 12px;
+    max-height: 158px;
+    margin-bottom: 40px;
+  }
 }
 
 .form__wrapper {
@@ -73,6 +100,10 @@ input[type="tel"] {
   width: 270px;
   margin-right: 37px;
   margin-left: 3px;
+
+  @media (max-width: $tablet) {
+    width: 280px;
+  }
 }
 
 .form__confidentiality {

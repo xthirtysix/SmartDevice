@@ -4,6 +4,11 @@
   padding-bottom: 114px;
 
   background-color: $accent-color;
+
+  @media (max-width: $tablet) {
+    padding-top: 65px;
+    padding-bottom: 105px;
+  }
 }
 
 .questions__container {
@@ -14,10 +19,21 @@
   background-position: calc(50% - 355px) 85px;
   background-size: 511px 288px;
   background-repeat: no-repeat;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+
+    background-image: none;
+  }
 }
 
 .questions__form {
   width: 50%;
   box-sizing: border-box;
   padding-left: 10px;
+
+  @media (max-width: $tablet) {
+    width: 85%;
+    padding-right: 10px;
+  }
 }
