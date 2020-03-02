@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -34,7 +38,7 @@ img {
 .button {
   display: inline-block;
   width: auto;
-  padding: 15px 25px;
+  padding: 13px 25px;
 
   font-family: $roboto;
   font-style: normal;
@@ -47,15 +51,29 @@ img {
   text-decoration: none;
   color: $foreground-color-light;
 
+  cursor: pointer;
+
   background-color: transparent;
 
   border: 1px solid $foreground-color-light;
   box-sizing: border-box;
   border-radius: 5px;
 
+  &:hover,
+  &:focus {
+    color: $foreground-color-dark;
+    background-color: $background-color;
+  }
+
   &--blue {
     color: $accent-color;
     border-color: $accent-color;
+
+    &:hover,
+    &:focus {
+      color: $foreground-color-light;
+      background-color: $accent-color;
+    }
   }
 
   &--banner {
@@ -63,6 +81,13 @@ img {
     line-height: 19px;
     background-color: $accent-color;
     border-color: $accent-color;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $foreground-color-light;
+      border-color: $foreground-color-light;
+    }
   }
 }
 

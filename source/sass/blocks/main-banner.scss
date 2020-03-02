@@ -1,3 +1,105 @@
 .main-banner {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  height: 878px;
+
   background-color: $background-color-dark;
+  background-image:
+    url("/img/pcb.png"),
+    url("/img/main-banner-background.png");
+  background-size: auto, cover;
+  background-position: calc(50% + 430px) calc(50% + 75px), center top;
+  background-repeat: no-repeat;
+}
+
+.main-banner__wrapper {
+  position: relative;
+
+  padding-top: 257px;
+  padding-bottom: 200px;
+}
+
+.main-banner__header {
+  z-index: 2;
+  position: relative;
+  margin-top: 58px;
+  margin-left: -6px;
+  margin-bottom: 27px;
+
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  color: $foreground-color-light;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.main-banner__description {
+  z-index: 2;
+  position: relative;
+
+  max-width: 680px;
+  margin-top: 10px;
+  margin-bottom: 44px;
+  padding-left: 92px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  color: $foreground-color-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -3px;
+
+    display: block;
+    width: 66px;
+    height: 2px;
+
+    background-color: $foreground-color-light;
+  }
+}
+
+.main-banner__button {
+  z-index: 2;
+  position: relative;
+  margin-left: 92px;
+  padding: 17px 44px;
+}
+
+.main-banner__picture {
+  z-index: 0;
+  position: absolute;
+  top: -58px;
+  right: -76px;
+
+  width: 705px;
+  height: 515px;
+}
+
+.main-banner__scroll-link {
+  position: absolute;
+  bottom: 15px;
+  left: -3px;
+  transform: rotate(180deg);
+
+  display: block;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  writing-mode: tb;
+  text-decoration: none;
+  color: $foreground-color-light;
+
+  opacity: 0.5;
 }

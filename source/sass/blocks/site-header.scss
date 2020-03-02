@@ -1,0 +1,95 @@
+.site-header {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 0;
+  padding-right: 18px;
+  padding-left: 12px;
+}
+
+.site-header__logo {
+  position: relative;
+
+  display: block;
+  cursor: pointer;
+
+  line-height: 0;
+}
+
+.site-header__contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__contact-item {
+  position: relative;
+
+  padding-left: 39px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--mail {
+    margin-left: 83px;
+
+    &::before {
+      top: 2px;
+      left: 0;
+      width: 19px;
+      height: 14px;
+
+      background-image: url("/img/icon-envelope.svg");
+      background-size: 19px 14px;
+    }
+  }
+
+  &--phone {
+    margin-left: 83px;
+
+    &::before {
+      top: 0;
+      left: 5px;
+      width: 18px;
+      height: 18px;
+
+      background-image: url("/img/icon-phone.svg");
+      background-size: 18px 18px;
+    }
+  }
+
+  &--callback {
+    margin-left: 12px;
+  }
+}
+
+.site-header__contact-link {
+  display: block;
+
+  font-family: $ptmono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: $foreground-color-light;
+}

@@ -1,3 +1,61 @@
 .modal {
+  display: none;
+  box-sizing: border-box;
+  z-index: 9001;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+
+  width: 490px;
+  height: auto;
+  padding: 40px 33px;
+
   background-color: $accent-color;
+
+  .form__button {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .form__confidentiality {
+    width: 100%;
+  }
+
+  .form__agreement-text {
+    min-width: 340px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+  }
+}
+
+.modal__description {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.modal input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.modal-background {
+  display: none;
+  z-index: 9000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  opacity: 0.5;
 }
