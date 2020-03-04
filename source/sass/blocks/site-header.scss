@@ -3,7 +3,6 @@
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
 }
 
@@ -19,15 +18,42 @@
     padding: 20px 25px;
     padding-right: 15px;
   }
+
+  @media (max-width: $mobile) {
+    padding: 17px;
+  }
 }
 
 .site-header__logo {
   position: relative;
-
   display: block;
+  line-height: 0;
   cursor: pointer;
 
-  line-height: 0;
+  &--mobile {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  @media (max-width: $mobile) {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+}
+
+.site-header__adaptive-logo {
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .site-header__contacts {
@@ -41,7 +67,6 @@
 }
 
 .site-header__contact-item {
-
   &--callback {
     margin-left: 50px;
 
@@ -53,10 +78,8 @@
 
 .site-header__contact-link {
   position: relative;
-
   display: block;
   padding-left: 40px;
-
   font-family: $ptmono;
   font-style: normal;
   font-weight: normal;
@@ -68,11 +91,8 @@
   &::before {
     content: "";
     position: absolute;
-
-
     background-position: 0 0;
     background-repeat: no-repeat;
-
     cursor: pointer;
   }
 
@@ -84,7 +104,6 @@
       left: 0;
       width: 19px;
       height: 14px;
-
       background-image: url("/img/icon-envelope.svg");
       background-size: 19px 14px;
     }
@@ -92,10 +111,8 @@
     @media (max-width: $tablet) {
       &::before {
         top: -2px;
-
         width: 25px;
         height: 19px;
-
         background-size: 25px 19px;
       }
     }
@@ -108,7 +125,6 @@
       left: 5px;
       width: 18px;
       height: 18px;
-
       background-image: url("/img/icon-phone.svg");
       background-size: 18px 18px;
     }
@@ -118,17 +134,24 @@
 
       &::before {
         top: -5px;
-
         width: 24px;
         height: 24px;
-
         background-size: 24px 24px;
       }
     }
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
   @media (max-width: $tablet) {
     font-size: 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 28px;
   }
 }
 

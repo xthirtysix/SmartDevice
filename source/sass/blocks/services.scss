@@ -5,11 +5,6 @@
 .services__container {
   padding-top: 52px;
   padding-bottom: 91px;
-
-  @media (max-width: $tablet) {
-    padding-top: 30px;
-    padding-bottom: 32px;
-  }
 }
 
 .services__header {
@@ -21,14 +16,6 @@
   font-size: 36px;
   line-height: 51px;
   color: $foreground-color-light;
-
-  @media (max-width: $tablet) {
-    max-width: 615px;
-    margin-top: 20px;
-
-    font-size: 32px;
-    line-height: 140.62%;
-  }
 }
 
 .services__list {
@@ -38,22 +25,21 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  @media (max-width: $tablet) {
-    flex-direction: column;
-  }
 }
 
 .services__item {
   width: 31.7%;
   max-height: 625px;
   margin-bottom: 37px;
+}
 
-  @media (max-width: $tablet) {
-    width: 100%;
-    max-height: 256px;
-    margin-bottom: 46px;
-  }
+.services__item-header {
+  margin: 0;
+  max-width: 170px;
+
+  font-weight: normal;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .services__link {
@@ -61,7 +47,7 @@
   position: relative;
 
   display: block;
-  height: 620px;
+  min-height: 620px;
   padding: 50px 44px 60px;
 
   font-family: $roboto;
@@ -88,31 +74,6 @@
     background-repeat: no-repeat;
 
     opacity: 0.2;
-    filter: grayscale(100%);
-  }
-
-
-  &--production {
-    &::before {
-      background-image: url("/img/service_production.png");
-    }
-  }
-
-  &--installment {
-    &::before {
-      background-image: url("/img/service_installment.png");
-    }
-  }
-
-  &--parts {
-    &::before {
-      background-image: url("/img/service_parts.png");
-    }
-  }
-
-  span {
-    display: block;
-    max-width: 170px;
   }
 
   &::after {
@@ -130,7 +91,57 @@
     background-repeat: no-repeat;
   }
 
-  @media (max-width: $tablet) {
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--production {
+    &::before {
+      background-image: url("/img/service_production-bg.jpg");
+    }
+  }
+
+  &--installment {
+    &::before {
+      background-image: url("/img/service_installment-bg.jpg");
+    }
+  }
+
+  &--parts {
+    &::before {
+      background-image: url("/img/service_parts-bg.jpg");
+    }
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .services__container {
+    padding: 30px 25px 32px;
+  }
+
+  .services__header {
+    max-width: 615px;
+    margin-top: 20px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .services__list {
+    flex-direction: column;
+  }
+
+  .services__item {
+    width: 100%;
+    max-height: 256px;
+    margin-bottom: 46px;
+  }
+
+  .services__link {
     padding: 40px 45px 60px;
     min-height: 256px;
     height: auto;
@@ -142,6 +153,38 @@
       height: auto;
 
       background-size: 100% auto;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .services__container {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 34px;
+  }
+
+  .services__header {
+    margin-bottom: 42px;
+    padding-left: 8px;
+
+    font-size: 28px;
+  }
+
+  .services__item {
+    min-height: 256px;
+    margin-bottom: 30px;
+  }
+
+  .services__link {
+    padding: 20px 33px;
+
+    &::before {
+      background-size: cover;
+    }
+
+    &--parts {
+      padding-top: 30px;
     }
   }
 }

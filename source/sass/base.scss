@@ -1,8 +1,6 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -15,6 +13,11 @@ body {
   color: $foreground-color;
 
   background-color: $background-color;
+}
+
+.body-lock {
+  width: 100%;
+  position: fixed;
 }
 
 img {
@@ -31,7 +34,7 @@ img {
   padding: 0 15px;
 
   &--narrow {
-    padding: 0 135px;
+    padding: 0 134px;
   }
 
   @media (max-width: $tablet) {
@@ -39,6 +42,14 @@ img {
 
     &--narrow {
       padding: 0 25px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 17px;
+
+    &--narrow {
+      padding: 0 14px;
     }
   }
 }

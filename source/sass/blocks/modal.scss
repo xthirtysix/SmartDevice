@@ -1,54 +1,75 @@
 .modal {
-  display: none;
   box-sizing: border-box;
   z-index: 9001;
   position: fixed;
   top: 50vh;
   left: 50vw;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -57.2%);
 
   width: 490px;
   height: auto;
-  padding: 40px 33px;
+  padding: 29px 39px 36px;
 
   background-color: $accent-color;
 
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 11px 20px 19px;
+  }
+
+  .form__textarea {
+    max-height: 104px;
+    margin-bottom: 28px;
+  }
+
   .form__button {
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   .form__confidentiality {
-    width: 100%;
+    max-width: unset;
+    padding-left: 50px;
+    padding-right: 50px;
   }
+}
 
-  .form__agreement-text {
-    min-width: 340px;
+.modal__header {
+  margin-top: 0;
+  margin-bottom: 13px;
 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    opacity: 0.8;
-  }
-
-  input[type="checkbox"] {
-    width: 20px;
-  }
+  font-size: 28px;
+  line-height: 140.62%;
 }
 
 .modal__description {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
+  margin-left: -5px;
+  padding-right: 20px;
 }
 
-.modal input {
-  width: 100%;
-  margin-bottom: 30px;
+.modal__form-agreement-text {
+  min-width: 340px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
 }
 
 .modal-background {
-  display: none;
   z-index: 9000;
   position: fixed;
   top: 0;
@@ -58,4 +79,57 @@
 
   background-color: #000000;
   opacity: 0.5;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: $accent-color;
+
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    right: 24px;
+
+    width: 1px;
+    height: 23px;
+
+    background-color: $foreground-color-light;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

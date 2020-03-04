@@ -1,12 +1,17 @@
 .form {
   z-index: 2;
   position: relative;
+  justify-content: space-between;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .form__header {
   display: block;
+  width: 100%;
   margin-top: 15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 
   font-family: $roboto;
   font-style: normal;
@@ -14,115 +19,169 @@
   font-size: 36px;
   line-height: 51px;
   color: $foreground-color-light;
-
-  @media (max-width: $tablet) {
-    font-size: 32px;
-    line-height: 140.62%;
-  }
 }
 
 .form__description {
-  margin-top: 10px;
-  padding-left: 5px;
+  width: 100%;
+  margin-top: 0;
   margin-bottom: 52px;
+  padding-left: 5px;
 
   font-family: $ptmono;
   color: $foreground-color-light;
-
-  @media (max-width: $tablet) {
-    margin-top: 17px;
-    margin-bottom: 53px;
-  }
-}
-
-.form__container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  padding-left: 3px;
-
 }
 
 input[type="text"],
 input[type="tel"],
 .form__textarea {
   box-sizing: border-box;
-  padding: 14px 18px 17px;
+  margin-left: 3px;
+  margin-bottom: 42px;
+  padding: 12px 17px 16px;
 
   color: $foreground-color-light;
 
   background-color: #1abaff;
-  border: none;
+  border: 1px solid transparent;
 
   &::placeholder {
     color: $foreground-color-light;
   }
 
-  @media (max-width: $tablet) {
-    padding: 17px;
+  &:hover,
+  &:focus {
+    border: 1px solid $foreground-color-light;
   }
 }
 
 input[type="text"],
 input[type="tel"] {
-  width: 48%;
-  margin-bottom: 20px;
-
-  @media (max-width: $tablet) {
-    min-width: 276px;
-    margin-bottom: 23px;
-  }
+  width: 47.2%;
 }
 
+input[type="tel"] {
+  margin-left: auto;
+}
 
 .form__textarea {
   width: 100%;
-  max-height: 155px;
-  margin-bottom: 37px;
-  margin-left: 3px;
+  max-height: 154px;
 
   resize: none;
-
-  @media (max-width: $tablet) {
-    padding-top: 12px;
-    max-height: 158px;
-    margin-bottom: 40px;
-  }
-}
-
-.form__wrapper {
-  display: flex;
-  align-items: center;
 }
 
 .form__button {
+  display: block;
   width: 270px;
-  margin-right: 37px;
+  margin-right: auto;
   margin-left: 3px;
-
-  @media (max-width: $tablet) {
-    width: 280px;
-  }
 }
 
 .form__confidentiality {
   position: relative;
-  display: flex;
-  width: 263px;
+  max-width: 230px;
+  min-width: 180px;
+  padding-top: 8px;
+  padding-left: 33px;
 
-  input[type="checkbox"] {
+  font-size: 14px;
+  line-height: 16px;
+  color: $foreground-color-light;
+
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  input[type="checkbox"] + span {
     position: absolute;
-    top: 5px;
+    top: 9px;
     left: 0;
+    width: 14px;
+    height: 14px;
+    opacity: 0.4;
+    border: 1px solid $foreground-color-light;
+  }
+
+  input[type="checkbox"]:checked + span {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.66667L4.2 6L9 1' stroke='white'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-size: 9px 6px;
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"]:hover + span,
+  input[type="checkbox"]:focus + span {
+    opacity: 1;
   }
 }
 
-.form__agreement-text {
-  font-size: 14px;
-  line-height: 16px;
+@media (max-width: $tablet) {
+  .form__header {
+    margin-bottom: 17px;
 
-  padding-top: 3px;
-  padding-left: 34px;
-  color: $foreground-color-light;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .form__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    padding: 17px;
+  }
+
+  .form__textarea {
+    min-height: 160px;
+    margin-bottom: 44px;
+  }
+
+  .form__button {
+    width: 280px;
+  }
+
+  .form__confidentiality {
+    padding-top: 9px;
+    padding-right: 7px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .form__header {
+    margin-bottom: 0;
+    font-size: 28px;
+  }
+
+  .form__description {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-left: 0;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 100%;
+    margin-top: 13px;
+    margin-bottom: 17px;
+    padding: 15px 15px 16px;
+  }
+
+  .form__textarea {
+    margin-top: 16px;
+    min-height: unset;
+    max-height: 103px;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .form__button {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+  }
 }
