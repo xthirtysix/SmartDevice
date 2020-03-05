@@ -948,19 +948,18 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0;
   padding: 0;
   list-style: none; }
 
 .services__item {
   width: 31.7%;
   max-height: 625px;
-  margin-bottom: 37px; }
+  margin-bottom: 37px;
+  margin-right: 2.45%; }
+  .services__item:nth-child(3n) {
+    margin-right: 0; }
 
 .services__item-header {
   margin: 0;
@@ -1033,7 +1032,8 @@ img {
   .services__item {
     width: 100%;
     max-height: 256px;
-    margin-bottom: 46px; }
+    margin-bottom: 46px;
+    margin-right: 0; }
   .services__link {
     padding: 40px 45px 60px;
     min-height: 256px;

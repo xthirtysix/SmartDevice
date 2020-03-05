@@ -20,9 +20,7 @@
 
 .services__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -31,6 +29,11 @@
   width: 31.7%;
   max-height: 625px;
   margin-bottom: 37px;
+  margin-right: 2.45%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .services__item-header {
@@ -139,6 +142,7 @@
     width: 100%;
     max-height: 256px;
     margin-bottom: 46px;
+    margin-right: 0;
   }
 
   .services__link {
