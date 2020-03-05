@@ -85,7 +85,7 @@
     height: 63px;
 
     background-color: $accent-color;
-    background-image: url("/img/arrow.svg");
+    background-image: url("../img/arrow.svg");
     background-size: auto;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -100,19 +100,19 @@
 
   &--production {
     &::before {
-      background-image: url("/img/service_production-bg.jpg");
+      background-image: url("../img/service_production-bg.jpg");
     }
   }
 
   &--installment {
     &::before {
-      background-image: url("/img/service_installment-bg.jpg");
+      background-image: url("../img/service_installment-bg.jpg");
     }
   }
 
   &--parts {
     &::before {
-      background-image: url("/img/service_parts-bg.jpg");
+      background-image: url("../img/service_parts-bg.jpg");
     }
   }
 }
