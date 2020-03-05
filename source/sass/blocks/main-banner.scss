@@ -1,23 +1,25 @@
 .main-banner {
   position: relative;
   box-sizing: border-box;
-  overflow: hidden;
 
-  height: 878px;
+  min-height: 878px;
+  overflow: hidden;
 
   background-color: $background-color-dark;
   background-image:
-    url("/img/pcb.png"),
-    url("/img/main-banner-background.png");
-  background-size: auto, cover;
-  background-position: calc(50% + 430px) calc(50% + 75px), center top;
+    url("/img/pcb-bg.png"),
+    url("data:image/svg+xml,%3Csvg width='1920' height='881' viewBox='0 0 1920 881' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='-69' width='1920' height='950'%3E%3Crect y='-69' width='1920' height='950' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M1656.84 277.584L1382.17 753.334L1107.49 277.584L1656.84 277.584Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M1377.15 475.75L1216.5 754L1055.85 475.75L1377.15 475.75Z' stroke='white'/%3E%3Ccircle cx='1107' cy='277' r='5' fill='white'/%3E%3Ccircle cx='1056' cy='476' r='5' fill='white'/%3E%3Ccircle cx='1217' cy='754' r='5' fill='white'/%3E%3Ccircle cx='1382' cy='753' r='5' fill='white'/%3E%3Ccircle cx='1657' cy='277' r='5' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+    url("/img/main-banner-bg.png");
+  background-size: auto, auto, cover;
+  background-position: calc(50% + 430px) calc(50% + 75px), 50% 0, center top;
   background-repeat: no-repeat;
 
-  @media (max-width: $tablet) {
-    height: 686px;
-
-    background-size: 465px 340px, auto;
-    background-position: 510px 113px, center top;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("/img/pcb-bg@2x.png"),
+      url("data:image/svg+xml,%3Csvg width='1920' height='881' viewBox='0 0 1920 881' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='-69' width='1920' height='950'%3E%3Crect y='-69' width='1920' height='950' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M1656.84 277.584L1382.17 753.334L1107.49 277.584L1656.84 277.584Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M1377.15 475.75L1216.5 754L1055.85 475.75L1377.15 475.75Z' stroke='white'/%3E%3Ccircle cx='1107' cy='277' r='5' fill='white'/%3E%3Ccircle cx='1056' cy='476' r='5' fill='white'/%3E%3Ccircle cx='1217' cy='754' r='5' fill='white'/%3E%3Ccircle cx='1382' cy='753' r='5' fill='white'/%3E%3Ccircle cx='1657' cy='277' r='5' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+      url("/img/main-banner-bg@2x.png");
+    background-size: 705px 515px, auto, cover;
   }
 }
 
@@ -26,13 +28,6 @@
 
   padding-top: 257px;
   padding-bottom: 200px;
-
-  @media (max-width: $tablet) {
-    padding-top: 168px;
-
-    padding-left: 65px;
-    padding-right: 65px;
-  }
 }
 
 .main-banner__header {
@@ -51,16 +46,6 @@
 
   letter-spacing: 0.07em;
   text-transform: uppercase;
-
-  @media (max-width: $tablet) {
-    max-width: 470px;
-    margin-top: 20px;
-    margin-bottom: 29px;
-    margin-left: -2px;
-
-    font-size: 60px;
-    line-height: 70px;
-  }
 }
 
 .main-banner__description {
@@ -90,33 +75,21 @@
 
     background-color: $foreground-color-light;
   }
-
-  @media (max-width: $tablet) {
-    max-width: 360px;
-    padding-left: 49px;
-    margin-bottom: 55px;
-
-    font-size: 18px;
-    line-height: 156.8%;
-
-    &::before {
-      top: 16px;
-      left: 0;
-
-      width: 33px;
-    }
-  }
 }
 
 .main-banner__button {
   z-index: 2;
   position: relative;
-  margin-left: 92px;
-  padding: 17px 44px;
 
-  @media (max-width: $tablet) {
-    margin-left: 50px;
-    padding: 17px 29px;
+  display: block;
+  margin-left: 91px;
+  width: 407px;
+  padding: 17px 0;
+}
+
+.main-banner__adaptive-button {
+  &--mobile {
+    display: none;
   }
 }
 
@@ -132,9 +105,9 @@
 
 .main-banner__scroll-link {
   position: absolute;
-  bottom: 15px;
-  left: -3px;
-  transform: rotate(180deg);
+  bottom: 52px;
+  left: -41px;
+  transform: rotate(-90deg);
 
   display: block;
 
@@ -142,13 +115,138 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  writing-mode: tb;
   text-decoration: none;
   color: $foreground-color-light;
 
   opacity: 0.5;
+  cursor: pointer;
 
-  @media (max-width: $tablet) {
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet) {
+  .main-banner {
+    min-height: 686px;
+
+    background-image:
+      url("/img/pcb-bg.png"),
+      url("data:image/svg+xml,%3Csvg width='770' height='563' viewBox='0 0 770 563' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='-550' y='-187' width='1515' height='750'%3E%3Crect x='-550' y='-187' width='1514.15' height='749.187' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M756.432 86.4277L540.002 461.296L323.571 86.4277L756.432 86.4277Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M535.86 242.705L409.353 461.821L282.847 242.705L535.86 242.705Z' stroke='white'/%3E%3Ccircle cx='323' cy='85.8618' r='3.94309' fill='white'/%3E%3Ccircle cx='282.78' cy='242.797' r='3.94309' fill='white'/%3E%3Ccircle cx='409.748' cy='462.032' r='3.94309' fill='white'/%3E%3Ccircle cx='539.87' cy='461.244' r='3.94309' fill='white'/%3E%3Ccircle cx='756.74' cy='85.8618' r='3.94309' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+      url("/img/main-banner-bg.png");
+    background-size: 465px 340px, auto, auto;
+    background-position: 510px 113px, 178px 0, center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("/img/pcb-bg@2x.png"),
+        url("data:image/svg+xml,%3Csvg width='770' height='563' viewBox='0 0 770 563' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='-550' y='-187' width='1515' height='750'%3E%3Crect x='-550' y='-187' width='1514.15' height='749.187' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M756.432 86.4277L540.002 461.296L323.571 86.4277L756.432 86.4277Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M535.86 242.705L409.353 461.821L282.847 242.705L535.86 242.705Z' stroke='white'/%3E%3Ccircle cx='323' cy='85.8618' r='3.94309' fill='white'/%3E%3Ccircle cx='282.78' cy='242.797' r='3.94309' fill='white'/%3E%3Ccircle cx='409.748' cy='462.032' r='3.94309' fill='white'/%3E%3Ccircle cx='539.87' cy='461.244' r='3.94309' fill='white'/%3E%3Ccircle cx='756.74' cy='85.8618' r='3.94309' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+        url("/img/main-banner-bg@2x.png");
+    }
+  }
+
+  .main-banner__wrapper {
+    padding: 168px 69px 163px;
+  }
+
+  .main-banner__header {
+    max-width: 470px;
+    margin-top: 20px;
+    margin-bottom: 29px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .main-banner__description {
+    padding-left: 45px;
+    padding-right: 50px;
+    margin-bottom: 55px;
+
+    font-size: 18px;
+    line-height: 156.8%;
+
+    &::before {
+      top: 16px;
+      left: -3px;
+
+      width: 33px;
+    }
+  }
+
+  .main-banner__button {
+    width: 379px;
+    margin-left: 45px;
+  }
+
+  .main-banner__scroll-link {
     display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .main-banner {
+    min-height: 645px;
+
+    background-image:
+      url("/img/pcb-bg.png"),
+      url("data:image/svg+xml,%3Csvg width='770' height='509' viewBox='0 0 770 509' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='-645' y='-207' width='1447' height='716'%3E%3Crect x='-645' y='-207' width='1446.5' height='715.718' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M603.031 54.2351L396.308 412.29L189.584 54.2351L603.031 54.2351Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M392.312 203.531L271.496 412.791L150.679 203.531L392.312 203.531Z' stroke='white'/%3E%3Ccircle cx='188.999' cy='53.6721' r='3.76694' fill='white'/%3E%3Ccircle cx='150.577' cy='203.596' r='3.76694' fill='white'/%3E%3Ccircle cx='271.872' cy='413.038' r='3.76694' fill='white'/%3E%3Ccircle cx='396.181' cy='412.285' r='3.76694' fill='white'/%3E%3Ccircle cx='603.363' cy='53.6721' r='3.76694' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+      url("/img/main-banner-bg.png");
+    background-size: 301px 220px, auto, auto;
+    background-position: calc(80% + 11px) 92px, calc(80% + 381px) 20px, center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("/img/pcb-bg@2x.png"),
+        url("data:image/svg+xml,%3Csvg width='770' height='509' viewBox='0 0 770 509' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='-645' y='-207' width='1447' height='716'%3E%3Crect x='-645' y='-207' width='1446.5' height='715.718' fill='%23C4C4C4'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath opacity='0.2' d='M603.031 54.2351L396.308 412.29L189.584 54.2351L603.031 54.2351Z' stroke='white'/%3E%3Cpath opacity='0.2' d='M392.312 203.531L271.496 412.791L150.679 203.531L392.312 203.531Z' stroke='white'/%3E%3Ccircle cx='188.999' cy='53.6721' r='3.76694' fill='white'/%3E%3Ccircle cx='150.577' cy='203.596' r='3.76694' fill='white'/%3E%3Ccircle cx='271.872' cy='413.038' r='3.76694' fill='white'/%3E%3Ccircle cx='396.181' cy='412.285' r='3.76694' fill='white'/%3E%3Ccircle cx='603.363' cy='53.6721' r='3.76694' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A"),
+        url("/img/main-banner-bg@2x.png");
+    }
+  }
+
+  .main-banner__wrapper {
+    padding-top: 266px;
+    padding-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-banner__description {
+    max-width: none;
+    margin-bottom: 43px;
+    padding-left: 50px;
+    padding-right: 10px;
+
+    font-size: 16px;
+
+    &::before {
+      top: 15px;
+      left: 1px;
+    }
+  }
+
+  .main-banner__header {
+    min-width: 280px;
+    margin-bottom: 27px;
+    margin-left: -3px;
+
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.07em;
+  }
+
+  .main-banner__button {
+    width: 287px;
+    margin: 0 auto;
+  }
+
+  .main-banner__adaptive-button {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 }

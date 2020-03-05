@@ -2,18 +2,18 @@
   padding-top: 25px;
   padding-bottom: 111px;
 
-  @media (max-width: $tablet) {
-    padding-top: 10px;
-    padding-bottom: 86px;
+  background-image: url("/img/2005-desktop-bg.png");
+  background-position: 104px 60px;
+  background-size: 220px 317px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/2005-desktop-bg@2x.png");
   }
 }
 
 .about__wrapper {
   padding-left: 180px;
-
-  @media (max-width: $tablet) {
-    padding-left: 188px;
-  }
 }
 
 .about__header {
@@ -24,8 +24,44 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+}
 
-  @media (max-width: $tablet) {
+.about__text {
+  margin-bottom: 21px;
+  padding-right: 10px;
+}
+
+.about__responsive-text {
+  &--desktop-hidden {
+    display: none;
+  }
+}
+
+.about__button {
+  margin-top: 17px;
+  width: 180px;
+}
+
+@media (max-width: $tablet) {
+  .about {
+    padding-top: 8px;
+    padding-bottom: 86px;
+
+    background-image: url("/img/2005-tablet-bg.png");
+    background-position: -2px 11px;
+    background-size: 250px 362px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/2005-tablet-bg@2x.png");
+    }
+  }
+
+  .about__wrapper {
+    padding-left: 188px;
+  }
+
+  .about__header {
     margin-top: 6px;
     margin-bottom: 26px;
     margin-left: -3px;
@@ -33,23 +69,12 @@
     font-size: 32px;
     line-height: 140.62%;
   }
-}
 
-.about__text {
-  margin-bottom: 21px;
-  padding-right: 10px;
-
-  @media (max-width: $tablet) {
+  .about__text {
     padding-right: 0;
   }
-}
 
-.about__responsive-text {
-  &--desktop-hidden {
-    display: none;
-  }
-
-  @media (max-width: $tablet) {
+  .about__responsive-text {
     &--tablet-hidden {
       display: none;
     }
@@ -60,7 +85,30 @@
   }
 }
 
-.about__button {
-  margin-top: 17px;
-  width: 180px;
+@media (max-width: $mobile) {
+  .about {
+    background-image: none;
+
+    padding-top: 21px;
+    padding-bottom: 66px;
+  }
+
+  .about__wrapper {
+    padding: 1px;
+    padding-left: 3px;
+  }
+
+  .about__header {
+    margin-bottom: 21px;
+
+    font-size: 28px;
+  }
+
+  .about__text {
+    margin-bottom: 40px;
+
+    &--mb10 {
+      margin-bottom: 10px;
+    }
+  }
 }

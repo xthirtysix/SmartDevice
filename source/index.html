@@ -16,17 +16,24 @@
     <header>
       <div class="site-header">
         <div class="container site-header__container">
-          <a class="site-header__logo">
-            <svg width="202" height="52" aria-label="Логотип SmartDevice">
+          <a class="site-header__logo" tabindex="0" aria-label="Логотип SmartDevice">
+            <svg class="site-header__logo site-header__logo--tablet" width="202" height="52" role="img">
               <use xlink:href="#logo"></use>
               <use x="68px" y="11px" xlink:href="#logo_header"></use>
               <use x="68px" y="41px" xlink:href="#logo_description"></use>
             </svg>
+            <svg class="site-header__logo site-header__logo--mobile" width="38" height="38">
+              <use xlink:href="#logo_mobile"></use>
+            </svg>
           </a>
           <ul class="site-header__contacts">
-            <li class="site-header__contact-item"><a href="mailto:info@sd.ru" class="site-header__contact-link site-header__contact-link--mail">info@sd.ru</a></li>
-            <li class="site-header__contact-item"><a href="tel:+74950005252" class="site-header__contact-link site-header__contact-link--phone">+7 (495) 000 52 52</a></li>
-            <li class="site-header__contact-item site-header__contact-item--callback"><a class="button">Заказать звонок</a></li>
+            <li class="site-header__contact-item">
+              <a href="mailto:info@sd.ru" class="site-header__contact-link site-header__contact-link--mail" aria-label="Отправить e-mail">info@sd.ru</a>
+            </li>
+            <li class="site-header__contact-item">
+              <a href="tel:+74950005252" class="site-header__contact-link site-header__contact-link--phone" aria-label="Позвонить">+7 (495) 000 52 52</a>
+            </li>
+            <li class="site-header__contact-item site-header__contact-item--callback"><a tabindex="0" class="modal-trigger button">Заказать звонок</a></li>
           </ul>
         </div>
       </div>
@@ -40,56 +47,61 @@
           <div class="main-banner__wrapper">
             <h2 class="main-banner__header">Печатные платы</h2>
             <p class="main-banner__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="main-banner__button button button--banner" href="#form">Получить бесплатную консультацию</a>
-            <a class="main-banner__scroll-link" href="#advantages">Скролл вниз</a>
+            <a class="main-banner__button button button--banner" onclick="$('.advantages').animatescroll();">
+              <span class="main-banner__adaptive-button main-banner__adaptive-button--tablet">Получить бесплатную консультацию</span>
+              <span class="main-banner__adaptive-button main-banner__adaptive-button--mobile">Бесплатная консультация</span>
+            </a>
+            <a class="main-banner__scroll-link" onclick="$('.questions').animatescroll();">Скролл вниз</a>
           </div>
         </div>
       </section>
 
-      <section class="advantages" id="advantages">
-        <div class="container container--narrow">
-          <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item--timing">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-stopwatch"></use>
-              </svg>
-              <h3 class="advantages__header">Оперативные сроки</h3>
-              <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
-            </li>
-            <li class="advantages__item advantages__item--suppliers">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-hired"></use>
-              </svg>
-              <h3 class="advantages__header">Крупные поставщики</h3>
-              <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-            </li>
-            <li class="advantages__item">
-              <svg class="advantages__icon advantages__icon--detective">
-                <use xlink:href="#icon-detective"></use>
-              </svg>
-              <h3 class="advantages__header advantages__header--confidentiality">Полная конфиденциальность</h3>
-              <p class="advantages__text advantages__text--confidentiality">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
-            </li>
-            <li class="advantages__item">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-tag"></use>
-              </svg>
-              <h3 class="advantages__header advantages__header--price">Персонализация стоимости</h3>
-              <p class="advantages__text">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <div class="company-info">
+        <section class="advantages">
+          <div class="container container--narrow">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--timing">
+                <svg class="advantages__icon">
+                  <use xlink:href="#icon-stopwatch"></use>
+                </svg>
+                <h3 class="advantages__header">Оперативные сроки</h3>
+                <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              </li>
+              <li class="advantages__item advantages__item--suppliers">
+                <svg class="advantages__icon">
+                  <use xlink:href="#icon-hired"></use>
+                </svg>
+                <h3 class="advantages__header">Крупные поставщики</h3>
+                <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              </li>
+              <li class="advantages__item">
+                <svg class="advantages__icon advantages__icon--detective">
+                  <use xlink:href="#icon-detective"></use>
+                </svg>
+                <h3 class="advantages__header advantages__header--mb15">Полная конфиденциальность</h3>
+                <p class="advantages__text advantages__text--confidentiality">По желанию клиента<span class="advantages__additional-space">&nbsp;</span> мы обеспечиваем полную конфеденциальность.</p>
+              </li>
+              <li class="advantages__item">
+                <svg width="36" height="36" class="advantages__icon">
+                  <use xlink:href="#icon-tag"></use>
+                </svg>
+                <h3 class="advantages__header advantages__header--mb5 advantages__header--mt2">Персонализация стоимости</h3>
+                <p class="advantages__text">Мы<span class="advantages__additional-space">&nbsp;</span> подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-      <section class="container container--narrow about">
-        <div class="about__wrapper">
-          <h2 class="about__header">О компании</h2>
-          <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__responsive-text about__responsive-text--desktop-hidden">..</span><span class="about__responsive-text about__responsive-text--tablet-hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-          <a href="#" class="about__button button button--blue">Подробнее</a>
-        </div>
-      </section>
+        <section class="container container--narrow about">
+          <div class="about__wrapper">
+            <h2 class="about__header">О компании</h2>
+            <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+            <p class="about__text about__text--mb10">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__responsive-text about__responsive-text--desktop-hidden">..</span><span class="about__responsive-text about__responsive-text--tablet-hidden"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <a href="#" class="about__button button button--blue">Подробнее</a>
+          </div>
+        </section>
+      </div>
 
       <section class="services">
           <h2 class="visually-hidden">Товары и услуги</h2>
@@ -97,13 +109,13 @@
           <p class="services__header">Service Device предлагает следующие товары и услуги</p>
           <ul class="services__list">
             <li class="services__item"><a href="#" class="services__link services__link--production">
-              <span>Производство печатных плат</span>
+              <h3 class="services__item-header">Производство печатных плат</h3>
             </a></li>
             <li class="services__item"><a href="#" class="services__link services__link--installment">
-              <span>Монтаж печатных плат</span>
+              <h3 class="services__item-header">Монтаж печатных плат</h3>
             </a></li>
             <li class="services__item"><a href="#" class="services__link services__link--parts">
-              <span>Комплектующие для светотехники</span>
+              <h3 class="services__item-header">Комплектующие для светотехники</h3>
             </a></li>
           </ul>
         </div>
@@ -115,24 +127,18 @@
           <form class="questions__form form" action="post">
             <p class="form__header">Остались вопросы? Задайте их нам!</p>
             <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-            <div class="form__container">
-              <label class="visually-hidden" for="questions-name">
-              </label>
-              <input type="text" name="questions" id="questions-name" placeholder="Имя">
-              <label class="visually-hidden" for="questions-phone">
-              </label>
-              <input type="tel" name="questions" id="questions-phone" placeholder="Телефон">
-            </div>
-            <label for="questions-question">
-              <textarea class="form__textarea" name="questions" id="questions-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="questions-name"></label>
+            <input type="text" name="questions" id="questions-name" placeholder="Имя">
+            <label class="visually-hidden" for="questions-phone"></label>
+            <input type="tel" name="questions" id="questions-phone" placeholder="Телефон">
+            <label for="questions-question"></label>
+            <textarea class="form__textarea" name="questions" id="questions-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+            <button class="form__button button" type="submit">Задать вопрос</button>
+            <label class="form__confidentiality" for="questions-confidentiality">
+              <input class="visually-hidden" type="checkbox" name="questions" id="questions-confidentiality" required>
+              <span></span>
+              Я согласен на обработку персональных данных
             </label>
-            <div class="form__wrapper">
-              <button class="form__button button" type="submit">Задать вопрос</button>
-              <label class="form__confidentiality" for="questions-confidentiality">
-                <input type="checkbox" name="questions" id="questions-confidentiality" required>
-                <span class="form__agreement-text">Я согласен на обработку  персональных данных</span>
-              </label>
-            </div>
           </form>
         </div>
       </section>
@@ -141,7 +147,7 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__wrapper">
-          <a class="footer__logo">
+          <a class="footer__logo" tabindex="0">
             <svg width="216" height="52" aria-label="Логотип Service Device">
                 <use xlink:href="#logo"></use>
                 <use x="68px" y="5px" width="148" height="30" xlink:href="#logo_header_alt"></use>
@@ -173,20 +179,26 @@
           </ul>
         </div>
         <nav class="footer__navigation">
-          <h2 class="footer__header">Разделы сайта</h2>
-          <ul class="footer__navigation-list">
+          <div class="footer__header-container">
+            <h2 class="footer__header">Разделы сайта</h2>
+            <button class="footer__toggler footer__toggler--nav footer__toggler--off" type="button"><span class="visually-hidden">Показать или скрыть разделы сайта</span></button>
+          </div>
+          <ul class="footer__navigation-list accordion accordion--off">
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">О компании</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Комплектующие</a></li>
+            <li class="footer__navigation-item footer__navigation-item--3-from-end"><a href="#" class="footer__navigation-link">Комплектующие</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Продукты</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Доставка</a></li>
+            <li class="footer__navigation-item footer__navigation-item--2-from-end"><a href="#" class="footer__navigation-link">Доставка</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Производство печатных плат</a></li>
-            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Контакты</a></li>
+            <li class="footer__navigation-item footer__navigation-item--1-from-end"><a href="#" class="footer__navigation-link">Контакты</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Монтаж печатных плат</a></li>
           </ul>
         </nav>
         <div class="footer__contacts">
-          <h2 class="footer__header">Наш офис</h2>
-          <p class="footer__contacts-text">
+          <div class="footer__header-container">
+            <h2 class="footer__header">Наш офис</h2>
+            <button class="footer__toggler footer__toggler--contacts footer__toggler--off" type="button"><span class="visually-hidden">Показать или скрыть контакты</span></button>
+          </div>
+          <p class="footer__contacts-text accordion accordion--off">
             г. Мытищи, Олимпийский проспект, д.10<br>
             +7 (495) 589-40-50<br>
             +7 (925) 003-87-67<br>
@@ -204,27 +216,28 @@
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal modal--closed">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="form" action="post">
-        <span class="form__header">Закажите звонок</span>
-        <span class="form__description modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
-        <label for="callback-name">
-          <input type="text" name="callback" id="callback-name" placeholder="Имя">
-        </label>
-        <label for="callback-phone">
-          <input type="tel" name="callback" id="callback-phone" placeholder="Телефон">
-        </label>
-        <label for="callback-question">
-          <textarea class="form__textarea" name="callback" id="callback-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-        </label>
+      <button class="modal__close-button" type="button" aria-label="Закрыть форму обратной связи"></button>
+      <form class="form form--modal" action="post">
+        <p class="form__header modal__header">Закажите звонок</p>
+        <p class="form__description modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <label class="visually-hidden" for="callback-name"></label>
+        <input type="text" name="callback" id="callback-name" placeholder="Имя">
+        <label class="visually-hidden" for="questions-phone"></label>
+        <input type="tel" name="callback" id="callback-phone" placeholder="Телефон">
+        <label for="callback-question"></label>
+        <textarea class="form__textarea" name="callback" id="callback-question" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
         <button class="form__button button" type="submit">Отправить</button>
-        <label class="form__confidentiality" for="confidentiality">
-          <input type="checkbox" name="questions" id="confidentiality" required>
-          <span class="form__agreement-text">Я согласен на обработку  персональных данных</span>
+        <label class="form__confidentiality" for="callback-confidentiality">
+          <input class="visually-hidden" type="checkbox" name="callback" id="callback-confidentiality" required>
+          <span></span>
+          Я согласен на обработку персональных данных
         </label>
       </form>
     </section>
-    <div class="modal-background"></div>
+    <div class="modal-background modal-background--closed"></div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
