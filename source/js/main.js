@@ -27,7 +27,7 @@
     storage.tel = localStorage.getItem('tel');
     storage.text = localStorage.getItem('text');
 
-  } catch (err) {
+  } catch (error) {
     isStorageSupport = false;
   }
 

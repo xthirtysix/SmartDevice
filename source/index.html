@@ -17,7 +17,7 @@
       <div class="site-header">
         <div class="container site-header__container">
           <a class="site-header__logo" tabindex="0" aria-label="Логотип SmartDevice">
-            <svg class="site-header__logo site-header__logo--tablet" width="202" height="52">
+            <svg class="site-header__logo site-header__logo--tablet" width="202" height="52" role="img">
               <use xlink:href="#logo"></use>
               <use x="68px" y="11px" xlink:href="#logo_header"></use>
               <use x="68px" y="41px" xlink:href="#logo_description"></use>
@@ -27,8 +27,12 @@
             </svg>
           </a>
           <ul class="site-header__contacts">
-            <li class="site-header__contact-item"><a href="mailto:info@sd.ru" class="site-header__contact-link site-header__contact-link--mail">info@sd.ru</a></li>
-            <li class="site-header__contact-item"><a href="tel:+74950005252" class="site-header__contact-link site-header__contact-link--phone">+7 (495) 000 52 52</a></li>
+            <li class="site-header__contact-item">
+              <a href="mailto:info@sd.ru" class="site-header__contact-link site-header__contact-link--mail" aria-label="Отправить e-mail">info@sd.ru</a>
+            </li>
+            <li class="site-header__contact-item">
+              <a href="tel:+74950005252" class="site-header__contact-link site-header__contact-link--phone" aria-label="Позвонить">+7 (495) 000 52 52</a>
+            </li>
             <li class="site-header__contact-item site-header__contact-item--callback"><a tabindex="0" class="modal-trigger button">Заказать звонок</a></li>
           </ul>
         </div>
@@ -223,7 +227,7 @@
         <label class="visually-hidden" for="questions-phone"></label>
         <input type="tel" name="callback" id="callback-phone" placeholder="Телефон">
         <label for="callback-question"></label>
-        <textarea class="form__textarea" name="callback" id="callback-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+        <textarea class="form__textarea" name="callback" id="callback-question" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
         <button class="form__button button" type="submit">Отправить</button>
         <label class="form__confidentiality" for="callback-confidentiality">
           <input class="visually-hidden" type="checkbox" name="callback" id="callback-confidentiality" required>

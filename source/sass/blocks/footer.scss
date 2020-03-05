@@ -294,12 +294,14 @@
     margin-right: auto;
 
     &--years {
+      width: 100%;
       top: 112px;
-      left: calc(50% + 4px);
-      transform: translateX(-50%);
-
-      min-width: 240px;
+      left: 0;
     }
+  }
+
+  .footer__info-text {
+    text-align: center;
   }
 
   .footer__toggler {

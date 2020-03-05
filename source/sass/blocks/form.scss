@@ -79,6 +79,7 @@ input[type="tel"] {
 
 .form__confidentiality {
   position: relative;
+
   max-width: 230px;
   min-width: 180px;
   padding-top: 8px;
@@ -93,6 +94,12 @@ input[type="tel"] {
 
   &:hover {
     opacity: 1;
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 24px;
+    left: 2px;
   }
 
   input[type="checkbox"] + span {

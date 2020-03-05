@@ -36,22 +36,6 @@ img {
   &--narrow {
     padding: 0 134px;
   }
-
-  @media (max-width: $tablet) {
-    padding: 0 25px;
-
-    &--narrow {
-      padding: 0 25px;
-    }
-  }
-
-  @media (max-width: $mobile) {
-    padding: 0 17px;
-
-    &--narrow {
-      padding: 0 14px;
-    }
-  }
 }
 
 .button {
@@ -126,4 +110,24 @@ img {
   clip: rect(0 0 0 0);
 
   overflow: hidden;
+}
+
+@media (max-width: $tablet) {
+  .container {
+    padding: 0 25px;
+
+    &--narrow {
+      padding: 0 25px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .container {
+    padding: 0 17px;
+
+    &--narrow {
+      padding: 0 14px;
+    }
+  }
 }
