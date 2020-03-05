@@ -1557,16 +1557,12 @@ input[type="tel"] {
     .footer__toggler::before {
       top: 50%;
       left: 0;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
       width: 16px;
       height: 1px; }
     .footer__toggler::after {
       display: none;
       top: 0;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      left: 8px;
       width: 1px;
       height: 16px; }
     .footer__toggler--off::after {
