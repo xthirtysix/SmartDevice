@@ -121,4 +121,3 @@
   window.iMaskJS(document.querySelector('#questions-phone'), {mask: '+{7}(000)000-00-00'});
   window.iMaskJS(document.querySelector('#callback-phone'), {mask: '+{7}(000)000-00-00'});
 })();
-

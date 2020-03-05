@@ -26,7 +26,6 @@
     storage.name = localStorage.getItem('name');
     storage.tel = localStorage.getItem('tel');
     storage.text = localStorage.getItem('text');
-
   } catch (error) {
     isStorageSupport = false;
   }
@@ -121,4 +120,3 @@
   window.iMaskJS(document.querySelector('#questions-phone'), {mask: '+{7}(000)000-00-00'});
   window.iMaskJS(document.querySelector('#callback-phone'), {mask: '+{7}(000)000-00-00'});
 })();
-
