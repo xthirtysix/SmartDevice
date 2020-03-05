@@ -314,6 +314,8 @@
     background-color: transparent;
     border: none;
 
+    outline: none;
+
     &::before,
     &::after {
       content: "";

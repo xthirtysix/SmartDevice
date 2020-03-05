@@ -1549,7 +1549,8 @@ input[type="tel"] {
     height: 16px;
     display: block;
     background-color: transparent;
-    border: none; }
+    border: none;
+    outline: none; }
     .footer__toggler::before, .footer__toggler::after {
       content: "";
       position: absolute;
