@@ -1652,6 +1652,12 @@ input[type="tel"] {
   .modal__close-button:active {
     opacity: 0.3; }
 
+.accordion__toggler {
+  padding: 0; }
+
+.accordion__item {
+  padding: 0; }
+
 @media (max-width: 767px) {
   .accordion--off .accordion__icon::after {
     display: block; }
@@ -1691,8 +1697,7 @@ input[type="tel"] {
       top: 0;
       left: 8px;
       width: 1px;
-      height: 16px; } }
-
-.accordion__item {
-  display: block;
-  padding: 4px 15px 27px; }
+      height: 16px; }
+  .accordion__item {
+    display: block;
+    padding: 4px 15px 27px; } }

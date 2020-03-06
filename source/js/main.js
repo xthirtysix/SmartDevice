@@ -43,7 +43,7 @@
   }
 
   function existVerticalScroll() {
-    return document.body.offsetHeight > window.innerHeight
+    return document.body.offsetHeight > window.innerHeight;
   }
 
   function closeModal() {
