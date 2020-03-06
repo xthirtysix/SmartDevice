@@ -54,13 +54,13 @@ img {
   text-decoration: none;
   color: $foreground-color-light;
 
-  cursor: pointer;
-
   background-color: transparent;
 
   border: 1px solid $foreground-color-light;
   box-sizing: border-box;
   border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 
   &:hover,
   &:focus {

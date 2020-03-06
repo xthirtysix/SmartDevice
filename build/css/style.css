@@ -380,12 +380,13 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  cursor: pointer;
   background-color: transparent;
   border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 5px; }
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; }
   .button:hover, .button:focus {
     color: #1b2d37;
     background-color: #ffffff; }
@@ -1162,7 +1163,8 @@ input[type="tel"],
   color: #ffffff;
   background-color: #1abaff;
   border: 1px solid transparent;
-  border-radius: 0; }
+  border-radius: 0;
+  outline: none; }
   input[type="text"]::-webkit-input-placeholder,
   input[type="tel"]::-webkit-input-placeholder,
   .form__textarea::-webkit-input-placeholder {
@@ -1559,8 +1561,10 @@ input[type="tel"] {
   position: fixed;
   top: 50vh;
   left: 50vw;
-  -webkit-transform: translate(-50%, -57.2%);
-          transform: translate(-50%, -57.2%);
+  max-height: 100vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow-y: auto;
   width: 490px;
   height: auto;
   padding: 29px 39px 36px;
@@ -1627,6 +1631,7 @@ input[type="tel"] {
   height: 50px;
   background-color: #00b2ff;
   border: 1px solid transparent;
+  outline: none;
   cursor: pointer; }
   .modal__close-button::before, .modal__close-button::after {
     content: "";
@@ -1643,9 +1648,9 @@ input[type="tel"] {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg); }
   .modal__close-button:hover, .modal__close-button:focus {
-    opacity: 0.8; }
-  .modal__close-button:active {
     opacity: 0.5; }
+  .modal__close-button:active {
+    opacity: 0.3; }
 
 @media (max-width: 767px) {
   .accordion--off .accordion__icon::after {
