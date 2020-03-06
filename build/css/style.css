@@ -366,10 +366,36 @@ img {
   .container--narrow {
     padding: 0 134px; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 25px; }
+    .container--narrow {
+      padding: 0 25px; } }
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 17px; }
+    .container--narrow {
+      padding: 0 14px; } }
+
 .button {
   display: inline-block;
   width: auto;
   padding: 13px 25px;
+  vertical-align: middle;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -405,31 +431,6 @@ img {
       color: #00b2ff;
       background-color: #ffffff;
       border-color: #ffffff; }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 25px; }
-    .container--narrow {
-      padding: 0 25px; } }
-
-@media (max-width: 767px) {
-  .container {
-    padding: 0 17px; }
-    .container--narrow {
-      padding: 0 14px; } }
 
 .main-banner {
   position: relative;
@@ -846,6 +847,8 @@ img {
     line-height: 140.62%; }
     .advantages__header--mb15 {
       margin-bottom: 0; }
+    .advantages__header--pr15 {
+      padding-right: 15px; }
     .advantages__header--mt2 {
       margin-top: 2px;
       margin-bottom: 12px; }

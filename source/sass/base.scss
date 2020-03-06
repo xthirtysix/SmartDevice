@@ -38,62 +38,6 @@ img {
   }
 }
 
-.button {
-  display: inline-block;
-  width: auto;
-  padding: 13px 25px;
-
-  font-family: $roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $foreground-color-light;
-
-  background-color: transparent;
-
-  border: 1px solid $foreground-color-light;
-  box-sizing: border-box;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    color: $foreground-color-dark;
-    background-color: $background-color;
-  }
-
-  &--blue {
-    color: $accent-color;
-    border-color: $accent-color;
-
-    &:hover,
-    &:focus {
-      color: $foreground-color-light;
-      background-color: $accent-color;
-    }
-  }
-
-  &--banner {
-    font-size: 16px;
-    line-height: 19px;
-    background-color: $accent-color;
-    border-color: $accent-color;
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-      background-color: $foreground-color-light;
-      border-color: $foreground-color-light;
-    }
-  }
-}
-
 .visually-hidden {
   position: absolute;
 
