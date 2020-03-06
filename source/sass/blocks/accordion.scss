@@ -1,3 +1,11 @@
+.accordion__toggler {
+  padding: 0;
+}
+
+.accordion__item {
+  padding: 0;
+}
+
 @media (max-width: $mobile) {
   .accordion {
     &--off {
@@ -72,9 +80,10 @@
       height: 16px;
     }
   }
+
+  .accordion__item {
+    display: block;
+    padding: 4px 15px 27px;
+  }
 }
 
-.accordion__item {
-  display: block;
-  padding: 4px 15px 27px;
-}
