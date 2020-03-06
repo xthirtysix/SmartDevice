@@ -124,12 +124,12 @@
   list-style: none;
 }
 
-.footer__navigation-link {
-  text-decoration: none;
-
+.footer__navigation-link,
+.footer__contact-link,
+.footer__info-link {
   &:focus,
   &:hover {
-    opacity: 0.2;
+    opacity: 1;
   }
 }
 
@@ -156,8 +156,6 @@
   text-decoration: none;
   color: $foreground-color-dark;
 
-  opacity: 0.5;
-
   &--rights {
     margin-right: 74px;
     margin-left: -3px;
@@ -170,6 +168,10 @@
   &--studio {
     margin-left: auto;
   }
+}
+
+.footer__info-text {
+  opacity: 0.5;
 }
 
 @media (max-width: $tablet) {
