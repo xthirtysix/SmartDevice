@@ -1161,7 +1161,8 @@ input[type="tel"],
   padding: 12px 17px 16px;
   color: #ffffff;
   background-color: #1abaff;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  border-radius: 0; }
   input[type="text"]::-webkit-input-placeholder,
   input[type="tel"]::-webkit-input-placeholder,
   .form__textarea::-webkit-input-placeholder {
