@@ -45,6 +45,8 @@ input[type="tel"],
   border: 1px solid transparent;
   border-radius: 0;
 
+  outline: none;
+
   &::placeholder {
     color: $foreground-color-light;
   }

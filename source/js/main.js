@@ -42,6 +42,10 @@
     return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
   }
 
+  function existVerticalScroll() {
+    return document.body.offsetHeight > window.innerHeight
+  }
+
   function closeModal() {
     popup.classList.remove('modal--opened');
     modalBack.classList.remove('modal-background--opened');
@@ -53,8 +57,10 @@
 
     openTrigger.addEventListener('click', openModal);
 
-    body.classList.remove('body-lock');
-    window.scrollTo(SCROLL_POSITION, body.dataset.scrollY);
+    if (existVerticalScroll()) {
+      body.classList.remove('body-lock');
+      window.scrollTo(SCROLL_POSITION, body.dataset.scrollY);
+    }
   }
 
   function openModal() {
@@ -78,8 +84,11 @@
     openTrigger.removeEventListener('click', openModal);
 
     body.dataset.scrollY = getBodyScrollTop();
-    body.classList.add('body-lock');
-    body.style.top = '-' + body.dataset.scrollY + 'px';
+
+    if (existVerticalScroll()) {
+      body.classList.add('body-lock');
+      body.style.top = '-' + body.dataset.scrollY + 'px';
+    }
   }
 
   openTrigger.addEventListener('click', openModal);

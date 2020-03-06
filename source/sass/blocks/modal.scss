@@ -4,7 +4,10 @@
   position: fixed;
   top: 50vh;
   left: 50vw;
-  transform: translate(-50%, -57.2%);
+  max-height: 100vh;
+  transform: translate(-50%, -50%);
+
+  overflow-y: auto;
 
   width: 490px;
   height: auto;
@@ -100,6 +103,7 @@
   background-color: $accent-color;
 
   border: 1px solid transparent;
+  outline: none;
   cursor: pointer;
 
   &::before,
@@ -126,10 +130,10 @@
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   &:active {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }
