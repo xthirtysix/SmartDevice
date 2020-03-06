@@ -29,7 +29,6 @@
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   max-width: 125px;
   margin: 0;
   margin-left: -3px;
@@ -42,6 +41,13 @@
 }
 
 .footer__social-link {
+  display: block;
+  margin-bottom: 10px;
+
+  line-height: 0;
+
+  outline: none;
+
   &:focus,
   &:hover {
     opacity: 0.5;
@@ -91,11 +97,13 @@
 }
 
 .footer__navigation-link,
-.footer__contacts-text {
+.footer__contacts-text,
+.footer__contact-link {
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;
+  text-decoration: none;
   color: $foreground-color-dark;
 
   opacity: 0.5;
@@ -108,6 +116,12 @@
 .footer__contacts-text {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.footer__contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .footer__navigation-link {
