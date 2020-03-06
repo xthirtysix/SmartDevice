@@ -1,7 +1,80 @@
 @media (max-width: $mobile) {
   .accordion {
     &--off {
-      display: none;
+      .accordion__icon {
+        &::after {
+          display: block;
+        }
+      }
+
+      .accordion__item {
+        display: none;
+      }
     }
   }
+
+  .accordion__toggler {
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 15px 27px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      h2 {
+        opacity: 0.7;
+      }
+
+      .accordion__icon {
+        &::before,
+        &::after {
+          background-color: $foreground-color;
+        }
+      }
+    }
+  }
+
+  .accordion__icon {
+    position: relative;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: transparent;
+    border: none;
+
+    outline: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+
+      background-color: #c4c4c4;
+    }
+
+    &::before {
+      top: 50%;
+      left: 0;
+
+      width: 16px;
+      height: 1px;
+    }
+
+    &::after {
+      display: none;
+
+      top: 0;
+      left: 8px;
+
+      width: 1px;
+      height: 16px;
+    }
+  }
+}
+
+.accordion__item {
+  display: block;
+  padding: 4px 15px 27px;
 }
