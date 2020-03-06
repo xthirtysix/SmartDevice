@@ -43,6 +43,7 @@ input[type="tel"],
 
   background-color: #1abaff;
   border: 1px solid transparent;
+  border-radius: 0;
 
   &::placeholder {
     color: $foreground-color-light;
