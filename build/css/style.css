@@ -1405,10 +1405,12 @@ input[type="tel"] {
   padding: 0;
   list-style: none; }
 
-.footer__navigation-link {
-  text-decoration: none; }
-  .footer__navigation-link:focus, .footer__navigation-link:hover {
-    opacity: 0.2; }
+.footer__navigation-link:focus, .footer__navigation-link:hover,
+.footer__contact-link:focus,
+.footer__contact-link:hover,
+.footer__info-link:focus,
+.footer__info-link:hover {
+  opacity: 1; }
 
 .footer__info {
   border-top: 1px solid rgba(98, 105, 98, 0.2); }
@@ -1431,8 +1433,7 @@ input[type="tel"] {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #1b2d37;
-  opacity: 0.5; }
+  color: #1b2d37; }
   .footer__info-text--rights,
   .footer__info-link--rights {
     margin-right: 74px;
@@ -1443,6 +1444,9 @@ input[type="tel"] {
   .footer__info-text--studio,
   .footer__info-link--studio {
     margin-left: auto; }
+
+.footer__info-text {
+  opacity: 0.5; }
 
 @media (max-width: 1023px) {
   .footer {
