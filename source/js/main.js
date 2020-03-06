@@ -93,26 +93,49 @@
 
 // Accordion
 (function () {
-  var navigationToggler = document.querySelector('.footer__toggler--nav');
-  var contactsToggler = document.querySelector('.footer__toggler--contacts');
+  var ENTER = 13;
+  var accordions = document.querySelectorAll('.accordion');
+  var accordionTogglers = document.querySelectorAll('.accordion__toggler');
 
-  var navigationBlock = document.querySelector('.footer__navigation-list');
-  var contactsBlock = document.querySelector('.footer__contacts-text');
+  function toggleAccordion(toggler) {
+    function toggle() {
+      var accordion = toggler.parentElement;
 
-  function toggleBlock(toggler, block) {
-    toggler.addEventListener('click', function () {
-      if (toggler.classList.contains('footer__toggler--off') && block.classList.contains('accordion--off')) {
-        block.classList.remove('accordion--off');
-        toggler.classList.remove('footer__toggler--off');
+      if (accordion.classList.contains('accordion--off')) {
+        for (var i = 0; i < accordions.length; i++) {
+          if (!accordions[i].classList.contains('accordion--off')) {
+            accordions[i].classList.add('accordion--off');
+          }
+        }
+        accordion.classList.remove('accordion--off');
       } else {
-        block.classList.add('accordion--off');
-        toggler.classList.add('footer__toggler--off');
+        accordion.classList.add('accordion--off');
+      }
+    }
+
+    toggler.addEventListener('click', toggle);
+    toggler.addEventListener('keypress', function (evt) {
+      if (evt.keyCode === ENTER) {
+        toggle();
       }
     });
   }
 
-  toggleBlock(navigationToggler, navigationBlock);
-  toggleBlock(contactsToggler, contactsBlock);
+  accordionTogglers.forEach(function (toggler) {
+    toggleAccordion(toggler);
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      accordionTogglers.forEach(function (toggler) {
+        toggler.tabIndex = 0;
+      });
+    } else {
+      accordionTogglers.forEach(function (toggler) {
+        toggler.tabIndex = -1;
+      });
+    }
+  });
 })();
 
 // iMask

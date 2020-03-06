@@ -262,7 +262,7 @@
 
   .footer__wrapper {
     flex-direction: column;
-    padding-bottom: 47px;
+    padding-bottom: 43px;
   }
 
   .footer__logo {
@@ -277,22 +277,19 @@
     margin-bottom: 0;
   }
 
-  .footer__navigation {
+  .footer__navigation,
+  .footer__contacts {
     width: 100%;
-    padding: 29px 15px 27px;
+    padding: 0;
+  }
 
+  .footer__navigation {
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 
   .footer__navigation-list,
   .footer__contacts-text {
-    margin-top: 30px;
     padding-right: 20px;
-  }
-
-  .footer__contacts {
-    width: 100%;
-    padding: 29px 15px 27px;
   }
 
   .footer__info-container {
@@ -316,58 +313,5 @@
 
   .footer__info-text {
     text-align: center;
-  }
-
-  .footer__toggler {
-    position: relative;
-    width: 16px;
-    height: 16px;
-
-    display: block;
-
-    background-color: transparent;
-    border: none;
-
-    outline: none;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-
-      background-color: #c4c4c4;
-    }
-
-    &::before {
-      top: 50%;
-      left: 0;
-
-      width: 16px;
-      height: 1px;
-    }
-
-    &::after {
-      display: none;
-
-      top: 0;
-      left: 8px;
-
-      width: 1px;
-      height: 16px;
-    }
-
-    &--off {
-      &::after {
-        display: block;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      &::before,
-      &::after {
-        background-color: $foreground-color;
-      }
-    }
   }
 }

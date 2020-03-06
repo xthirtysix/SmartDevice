@@ -178,12 +178,12 @@
             </li>
           </ul>
         </div>
-        <nav class="footer__navigation">
-          <div class="footer__header-container">
+        <nav class="footer__navigation accordion accordion--off">
+          <div class="footer__header-container accordion__toggler accordion__toggler--off" aria-label="Показать или скрыть разделы сайта">
             <h2 class="footer__header">Разделы сайта</h2>
-            <button class="footer__toggler footer__toggler--nav footer__toggler--off" type="button"><span class="visually-hidden">Показать или скрыть разделы сайта</span></button>
+            <span class="accordion__icon" type="button"></span>
           </div>
-          <ul class="footer__navigation-list accordion accordion--off">
+          <ul class="footer__navigation-list accordion__item accordion__item--off">
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">О компании</a></li>
             <li class="footer__navigation-item footer__navigation-item--3-from-end"><a href="#" class="footer__navigation-link">Комплектующие</a></li>
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Продукты</a></li>
@@ -193,19 +193,21 @@
             <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Монтаж печатных плат</a></li>
           </ul>
         </nav>
-        <div class="footer__contacts">
-          <div class="footer__header-container">
+        <div class="footer__contacts accordion">
+          <div class="footer__header-container accordion__toggler accordion__toggler--off" aria-label="Показать или скрыть контакты">
             <h2 class="footer__header">Наш офис</h2>
-            <button class="footer__toggler footer__toggler--contacts footer__toggler--off" type="button"><span class="visually-hidden">Показать или скрыть контакты</span></button>
+            <span class="accordion__icon"></span>
           </div>
-          <p class="footer__contacts-text accordion accordion--off">
-            г. Мытищи, Олимпийский проспект, д.10
-          </p>
-          <ul class="footer__contacts-list">
-            <li><a class="footer__contact-link" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-            <li><a class="footer__contact-link" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
-            <li><a class="footer__contact-link" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
-          </ul>
+          <div class="accordion__item accordion__item--off">
+            <p class="footer__contacts-text">
+              г. Мытищи, Олимпийский проспект, д.10
+            </p>
+            <ul class="footer__contacts-list">
+              <li><a class="footer__contact-link" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+              <li><a class="footer__contact-link" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+              <li><a class="footer__contact-link" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer__info">
