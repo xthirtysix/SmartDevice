@@ -43,7 +43,7 @@
   }
 
   function existVerticalScroll() {
-    return document.body.offsetHeight > window.innerHeight
+    return document.body.offsetHeight > window.innerHeight;
   }
 
   function closeModal() {
@@ -130,9 +130,9 @@
     });
   }
 
-  accordionTogglers.forEach(function (toggler) {
-    toggleAccordion(toggler);
-  });
+  for (var i = 0; i < accordionTogglers.length; i++) {
+    toggleAccordion(accordionTogglers[i]);
+  }
 
   window.addEventListener('resize', function () {
     if (window.matchMedia('(max-width: 767px)').matches) {
