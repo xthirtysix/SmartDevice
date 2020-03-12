@@ -136,13 +136,13 @@
 
   window.addEventListener('resize', function () {
     if (window.matchMedia('(max-width: 767px)').matches) {
-      for (var j = 0; j < accordionTogglers.length; j++) {
-        accordionTogglers[j].tabIndex = 0;
-      }
+      accordionTogglers.forEach(function (toggler) {
+        toggler.tabIndex = 0;
+      });
     } else {
-      for (var k = 0; k < accordionTogglers.length; k++) {
-        accordionTogglers[k].tabIndex = -1;
-      }
+      accordionTogglers.forEach(function (toggler) {
+        toggler.tabIndex = -1;
+      });
     }
   });
 })();
