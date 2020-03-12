@@ -336,6 +336,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -345,7 +346,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #666666;
-  background-color: #ffffff; }
+  background-color: #1b2d37; }
 
 .body-lock {
   width: 100%;
@@ -634,11 +635,12 @@ img {
   position: relative;
   display: block;
   line-height: 0;
+  outline: none;
   cursor: pointer; }
   .site-header__logo--mobile {
     display: none; }
   .site-header__logo:hover, .site-header__logo:focus {
-    opacity: 0.8; }
+    opacity: 0.7; }
   @media (max-width: 767px) {
     .site-header__logo--tablet {
       display: none; }
@@ -998,6 +1000,7 @@ img {
     background-size: auto 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-color: gray;
     opacity: 0.2; }
   .services__link::after {
     content: "";
@@ -1171,23 +1174,33 @@ input[type="tel"],
   input[type="text"]::-webkit-input-placeholder,
   input[type="tel"]::-webkit-input-placeholder,
   .form__textarea::-webkit-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   input[type="text"]::-moz-placeholder,
   input[type="tel"]::-moz-placeholder,
   .form__textarea::-moz-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   input[type="text"]:-ms-input-placeholder,
   input[type="tel"]:-ms-input-placeholder,
   .form__textarea:-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   input[type="text"]::-ms-input-placeholder,
   input[type="tel"]::-ms-input-placeholder,
   .form__textarea::-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   input[type="text"]::placeholder,
   input[type="tel"]::placeholder,
   .form__textarea::placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
+  input[type="text"]:invalid,
+  input[type="tel"]:invalid,
+  .form__textarea:invalid {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   input[type="text"]:hover, input[type="text"]:focus,
   input[type="tel"]:hover,
   input[type="tel"]:focus,
@@ -1312,9 +1325,10 @@ input[type="tel"] {
   display: block;
   margin-left: -3px;
   margin-bottom: 48px;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .footer__logo:hover, .footer__logo:focus {
-    opacity: 0.8; }
+    opacity: 0.7; }
 
 .footer__social-list {
   display: -webkit-box;
@@ -1660,7 +1674,8 @@ input[type="tel"] {
     opacity: 0.3; }
 
 .accordion__toggler {
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 .accordion__item {
   padding: 0; }

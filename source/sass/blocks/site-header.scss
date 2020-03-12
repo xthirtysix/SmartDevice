@@ -28,6 +28,8 @@
   position: relative;
   display: block;
   line-height: 0;
+
+  outline: none;
   cursor: pointer;
 
   &--mobile {
@@ -36,7 +38,7 @@
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   @media (max-width: $mobile) {

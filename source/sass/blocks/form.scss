@@ -49,6 +49,11 @@ input[type="tel"],
 
   &::placeholder {
     color: $foreground-color-light;
+    opacity: 1;
+  }
+
+  &:invalid {
+    box-shadow: none;
   }
 
   &:hover,

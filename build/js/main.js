@@ -43,7 +43,7 @@
   }
 
   function existVerticalScroll() {
-    return document.body.offsetHeight > window.innerHeight
+    return document.body.offsetHeight > window.innerHeight;
   }
 
   function closeModal() {
@@ -130,19 +130,19 @@
     });
   }
 
-  accordionTogglers.forEach(function (toggler) {
-    toggleAccordion(toggler);
-  });
+  for (var i = 0; i < accordionTogglers.length; i++) {
+    toggleAccordion(accordionTogglers[i]);
+  }
 
   window.addEventListener('resize', function () {
     if (window.matchMedia('(max-width: 767px)').matches) {
-      accordionTogglers.forEach(function (toggler) {
-        toggler.tabIndex = 0;
-      });
+      for (var j = 0; j < accordionTogglers.length; j++) {
+        accordionTogglers[j].tabIndex = 0;
+      }
     } else {
-      accordionTogglers.forEach(function (toggler) {
-        toggler.tabIndex = -1;
-      });
+      for (var k = 0; k < accordionTogglers.length; k++) {
+        accordionTogglers[k].tabIndex = -1;
+      }
     }
   });
 })();
